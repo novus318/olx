@@ -105,6 +105,9 @@
     font-weight: bolder;
     margin-right: 5px;
   }
+  .loginPage {
+    margin-right: 1em;
+  }
   
   .loginPage hr {
     margin: 0;
@@ -119,6 +122,7 @@
   .sellMenu {
     position: relative;
     cursor: pointer;
+    margin-right: 1.5em;
   }
   
   .sellMenu .all {
