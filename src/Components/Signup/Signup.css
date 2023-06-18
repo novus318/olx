@@ -14,6 +14,9 @@
     border-left-color: transparent;
     border-right-color: transparent;
     outline-color: transparent;
+    width: 100% ;
+    margin-bottom: 0.7em;
+    
   }
   
   .signupParentDiv button {
@@ -35,4 +38,6 @@
     justify-content: center;
     cursor: pointer;
   }
-  
+  .signupParentDiv .login{
+    margin-top: 1em;
+  }

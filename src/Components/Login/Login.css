@@ -14,6 +14,8 @@
     border-left-color: transparent;
     border-right-color: transparent;
     outline-color: transparent;
+    width: 100%;
+    margin-bottom: 1em;
   }
   
   .loginParentDiv button {
@@ -23,6 +25,7 @@
     background-color: #002f34;
     color: whitesmoke;
     font-weight: 900;
+    border-radius: 0.2em;
   }
   .loginParentDiv button:hover {
     background-color: white;
@@ -35,4 +38,6 @@
     justify-content: center;
     cursor: pointer;
   }
-  
+  .loginParentDiv .signup{
+    margin-top: 1em;
+  }
