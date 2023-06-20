@@ -3,7 +3,7 @@ import './Create.css';
 import Header from '../Header/Header';
 import Fileupload from '../../assets/Fileupload';
 import {AuthContext,FirebaseContext} from '../../store/Context'
-import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+import { useHistory } from 'react-router-dom';
 
 const Create = () => {
   const {firebase} = useContext(FirebaseContext)
