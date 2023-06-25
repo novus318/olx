@@ -3,10 +3,14 @@ import React, { useContext, useEffect, useState } from 'react';
 import Heart from '../../assets/Heart';
 import './Post.css';
 import { FirebaseContext } from '../../store/Context';
+import { PostContext } from '../../store/PostContext';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
 function Posts() {
 const {firebase} = useContext(FirebaseContext)
 const [products, setProducts] = useState([])
+const {setPostDetails} = useContext(PostContext)
+const history =useHistory()
 useEffect(() => {
   firebase.firestore().collection('products').get().then((snapshot)=>{
     const allPost =snapshot.docs.map((product)=>{
@@ -34,6 +38,10 @@ useEffect(() => {
           return(
             <div
             className="card"
+            onClick={()=>{
+                setPostDetails(product)
+                history.push('/view')
+            }}
           >
             <div className="favorite">
               <Heart></Heart>
@@ -43,8 +51,8 @@ useEffect(() => {
             </div>
             <div className="content">
               <p className="rate">&#x20B9; {product.price}</p>
-              <span className="kilometer">{product.category}</span>
-              <p className="name"> {product.name}</p>
+              <span className="kilometer">{product.name}</span>
+              <p className="name"> {product.category}</p>
             </div>
             <div className="date">
               <span>{product.createdAt}</span>
@@ -59,22 +67,28 @@ useEffect(() => {
           <span>Fresh recommendations</span>
         </div>
         <div className="cards">
-          <div className="card">
+        {products.map((product)=>{
+          return(
+          <div className="card" onClick={()=>{
+            setPostDetails(product)
+            history.push('/view')
+        }}>
             <div className="favorite">
               <Heart></Heart>
             </div>
             <div className="image">
-              <img src="../../../Images/R15V3.jpg" alt="" />
+              <img src={product.url} alt="post" />
             </div>
             <div className="content">
-              <p className="rate">&#x20B9; 250000</p>
-              <span className="kilometer">Two Wheeler</span>
-              <p className="name"> YAMAHA R15V3</p>
+              <p className="rate">&#x20B9; {product.price}</p>
+              <span className="kilometer">{product.name}</span>
+              <p className="name"> {product.category}</p>
             </div>
             <div className="date">
-              <span>10/5/2021</span>
+              <span>{product.createdAt}</span>
             </div>
-          </div>
+          </div>)
+        })}
         </div>
       </div>
     </div>

@@ -4,11 +4,12 @@
   }
   .viewParentDiv .imageShowDiv {
     padding: 16px;
-    width: 70vw;
+    width: 60vw;
   }
   .viewParentDiv .imageShowDiv img {
-    width: 65vw;
-    height: 85vh;
+    width: 50vw;
+    height: 80vh;
+    border-radius: 1em;
   }
   
   .viewParentDiv .rightSection {

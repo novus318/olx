@@ -116,6 +116,15 @@
     font-weight: 600;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
+  .logout{
+    color: #002f34;
+    font-weight: 500;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+  }
+  .logout:hover{
+    border-bottom:solid #013a41 0.18em ;
+  }
   .loginPage:hover{
     border:none;
   }

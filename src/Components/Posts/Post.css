@@ -21,11 +21,7 @@
     color: #002f34;
   }
   
-  .recommendations .cards {
-    display: flex;
-  }
-  
-  .moreView .cards {
+  .cards {
     white-space: nowrap;
     overflow-x: scroll;
     overflow-y: hidden;
@@ -36,7 +32,7 @@
     padding: 13px;
     max-width: 222px;
     width: 222px;
-    height: 270px;
+    height: 14em;
     display: inline-block;
     cursor: pointer;
   }

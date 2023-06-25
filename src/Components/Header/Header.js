@@ -46,7 +46,7 @@ function Header() {
           }}>Login</span>}
           
         </div>
-        {user && <span onClick={()=>{
+        {user && <span className="logout" onClick={()=>{
           firebase.auth().signOut().then(()=>{
               history.push('/')
           })
