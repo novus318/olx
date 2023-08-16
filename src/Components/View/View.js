@@ -14,7 +14,7 @@ function View() {
         setUserDetails(doc.data())
       });
     })
-  }, [])
+  },[firebase,postDetails])
   
   return (
     <div className="viewParentDiv">

@@ -6,7 +6,7 @@ import Home from './Pages/Home';
 import Login from './Pages/Login'
 import Create from './Pages/Create'
 import Viewpost from './Pages/ViewPost'
-import { AuthContext, FirebaseContext } from './store/Context';
+import { AuthContext, FirebaseContext } from './store/Context'
 import Post from './store/PostContext'
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
     firebase.auth().onAuthStateChanged((user)=>{
       setUser(user)
     })
-  }, [])
+  }, [firebase,setUser])
   
   return (
     <div>

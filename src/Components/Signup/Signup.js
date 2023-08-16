@@ -31,7 +31,7 @@ firebase.auth().createUserWithEmailAndPassword(Email,Password).then((result)=>{
   return (
     <div>
       <div className="signupParentDiv">
-        <img width="100%" height="290em" src={Logo}></img>
+        <img width="100%" height="290em" alt='' src={Logo}/>
         <form onSubmit={handleSubmit}>
           <label htmlFor="fname">Username</label>
           <br />

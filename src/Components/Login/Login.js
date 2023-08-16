@@ -21,7 +21,7 @@ firebase.auth().signInWithEmailAndPassword(email,password).then(()=>{
   return (
     <div>
       <div className="loginParentDiv">
-        <img width="100%" height="290em" src={Logo}></img>
+        <img width="100%" height="290em" alt='' src={Logo}/>
         <form onSubmit={handleLogin}>
           <label htmlFor="fname">Email</label>
           <br />
